@@ -34,12 +34,18 @@ Output is in `dist/`.
 
 ## GitHub Pages (optional)
 
-If you enable Pages for this repo (Settings → Pages → Deploy from branch `main` / `/docs`, or GitHub Actions):
+Default Vite `base` is `/` (good for local use and custom domains). For a project site at
+`https://kfguiang-spec.github.io/wset-tasting-guide/`:
 
-1. Set the Vite `base` in `vite.config.ts` to `'/wset-tasting-guide/'` (repo name) before building, **or** use a custom domain / user Pages root.
-2. Build and publish the `dist/` folder (or configure the official Vite GitHub Pages action).
+1. Build with the repo base path:
+   ```bash
+   VITE_BASE=/wset-tasting-guide/ npm run build
+   ```
+2. In the repo on GitHub: **Settings → Pages → Build and deployment**.
+3. Either publish the `dist/` folder via a branch/`docs` folder, or add a GitHub Actions
+   deploy workflow (requires a token/PAT with the `workflow` scope to push `.github/workflows`).
 
-Default config uses `base: '/'`, which works for local preview, custom domains, and root-site hosting.
+Until Pages is enabled, use `npm run dev` or `npm run preview` locally.
 
 ## Stack
 
