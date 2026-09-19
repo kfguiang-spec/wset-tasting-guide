@@ -1,23 +1,25 @@
 :root {
-  color-scheme: dark;
-  --bg: #12080e;
-  --bg-elevated: #1a0d14;
-  --bg-card: #221018;
-  --bg-chip: #2c1520;
-  --bg-chip-hover: #3a1c2a;
-  --border: #4a2438;
-  --border-strong: #7a3a55;
-  --text: #f5e9ef;
-  --text-muted: #c4a8b6;
-  --accent: #c43b66;
-  --accent-soft: #e8a0b8;
-  --accent-glow: rgba(196, 59, 102, 0.35);
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-page: #faf8f7;
+  --bg-elevated: #f5f0f2;
+  --bg-card: #ffffff;
+  --bg-chip: #f7f2f4;
+  --bg-chip-hover: #efe6ea;
+  --border: #e0d0d6;
+  --border-strong: #b88a9a;
+  --text: #1a1216;
+  --text-muted: #5c4a52;
+  --accent: #8b1e3f;
+  --accent-soft: #6b2d4a;
+  --accent-glow: rgba(139, 30, 63, 0.2);
   --plum: #6b2d4a;
-  --gold: #d4a84b;
-  --fault: #e07070;
-  --primary: #7eb8a8;
-  --secondary: #c9a06a;
-  --tertiary: #9b8ec4;
+  --plum-deep: #5a1838;
+  --gold: #a67c2a;
+  --fault: #b42318;
+  --primary: #1f6b5c;
+  --secondary: #8a5a1e;
+  --tertiary: #5a4a8a;
   --radius: 12px;
   --nav-h: 52px;
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -25,7 +27,7 @@
   line-height: 1.45;
   font-weight: 400;
   color: var(--text);
-  background-color: var(--bg);
+  background-color: var(--bg-page);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,10 +48,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100dvh;
-  background:
-    radial-gradient(ellipse 120% 80% at 50% -20%, #3a1528 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 50%, #2a1020 0%, transparent 50%),
-    var(--bg);
+  background: var(--bg-page);
 }
 
 #root {
@@ -64,7 +63,7 @@ textarea {
 }
 
 a {
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 
 ::selection {

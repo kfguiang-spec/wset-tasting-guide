@@ -1,6 +1,6 @@
 # WSET Level 3 SAT · Wine Tasting Guide
 
-Mobile-first quick reference for the **WSET Level 3 Systematic Approach to Tasting (SAT)** for wine. Every Appearance, Nose, Palate, and Conclusions criterion shows its full descriptive scale at a glance — designed for use on a phone next to a glass.
+Mobile-first quick reference for the **WSET Level 2 & 3 Systematic Approach to Tasting (SAT)** for wine (L3 descriptive scales as the full grid). Every Appearance, Nose, Palate, and Conclusions criterion shows its full descriptive scale at a glance — designed for use on a phone next to a glass.
 
 This is an **educational study aid** using commonly published SAT descriptive vocabulary. It is **not** an official WSET exam document and is not affiliated with WSET Awards.
 
@@ -9,9 +9,10 @@ This is an **educational study aid** using commonly published SAT descriptive vo
 - Sticky section nav: Appearance · Nose · Palate · Conclusions
 - Full SAT scales as tappable chips (accurate `medium(−)` / `medium(+)` notation)
 - Colour swatches for white, rosé, and red
-- Searchable, expandable Primary / Secondary / Tertiary aroma & flavour vocabulary
+- Searchable, expandable Primary / Secondary / Tertiary aroma & flavour vocabulary (comprehensive descriptor lists)
+- Optional sparkling “other observations” (bubbles, mousse)
 - Optional tasting-notes scratchpad (saved in `localStorage`)
-- Dark burgundy/plum theme with high contrast for dim tasting rooms
+- Light (white/off-white) theme with burgundy/plum accents and high-contrast near-black text
 - Descriptive grid only — no fake numeric scores
 
 ## Quick start

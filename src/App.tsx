@@ -27,7 +27,6 @@ function App() {
 
   useEffect(() => {
     const ids = navSections.map((s) => s.id);
-    const observers: IntersectionObserver[] = [];
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -45,18 +44,18 @@ function App() {
       const el = document.getElementById(id);
       if (el) io.observe(el);
     });
-    observers.push(io);
-    return () => observers.forEach((o) => o.disconnect());
+    return () => io.disconnect();
   }, []);
 
   return (
     <div className="app">
       <header className="hero">
-        <p className="hero__eyebrow">WSET Level 3 · Wine</p>
+        <p className="hero__eyebrow">WSET Level 2 + 3 · Wine</p>
         <h1 className="hero__title">Systematic Approach to Tasting</h1>
         <p className="hero__sub">
-          Mobile quick-reference — full descriptive scales at a glance. Educational use of common
-          public SAT terms; not an official WSET exam document.
+          Mobile quick-reference — fullest descriptive scales at a glance (L3 grid with{' '}
+          <span className="mono">medium(−)</span> / <span className="mono">medium(+)</span>
+          ). Educational use of common public SAT terms; not an official WSET exam document.
         </p>
       </header>
 
@@ -100,6 +99,23 @@ function App() {
               onSelect={(v) => setPick('colour', v)}
             />
           </Criterion>
+          <Criterion
+            title="Other observations — bubbles"
+            hint="Sparkling wines (optional)"
+          >
+            <p className="sub-label">Quantity</p>
+            <ScaleChips
+              options={appearance.other.bubbleQuantity}
+              selected={picks.bubbleQty}
+              onSelect={(v) => setPick('bubbleQty', v)}
+            />
+            <p className="sub-label">Size</p>
+            <ScaleChips
+              options={appearance.other.bubbleSize}
+              selected={picks.bubbleSize}
+              onSelect={(v) => setPick('bubbleSize', v)}
+            />
+          </Criterion>
         </section>
 
         <section id="nose" className="section">
@@ -112,7 +128,10 @@ function App() {
               accent="fault"
             />
           </Criterion>
-          <Criterion title="Intensity">
+          <Criterion
+            title="Intensity"
+            hint="L3 five-point scale (L2 often uses light · medium · pronounced only)"
+          >
             <ScaleChips
               options={nose.intensity}
               selected={picks.noseIntensity}
@@ -182,6 +201,16 @@ function App() {
               onSelect={(v) => setPick('finish', v)}
             />
           </Criterion>
+          <Criterion
+            title="Other observations — mousse"
+            hint="Sparkling wines (optional)"
+          >
+            <ScaleChips
+              options={palate.other.mousse}
+              selected={picks.mousse}
+              onSelect={(v) => setPick('mousse', v)}
+            />
+          </Criterion>
         </section>
 
         <section id="conclusions" className="section">
@@ -209,8 +238,9 @@ function App() {
 
       <footer className="footer">
         <p>
-          Descriptive grid only — no numeric scores. Terms reflect commonly published WSET Level 3
-          SAT wine vocabulary for study. © study aid; not affiliated with WSET Awards.
+          Descriptive grid only — no numeric scores. Terms reflect commonly published WSET Level 2
+          &amp; 3 SAT wine vocabulary for study (L3 descriptive ranges shown). Study aid; not
+          affiliated with WSET Awards.
         </p>
       </footer>
     </div>
